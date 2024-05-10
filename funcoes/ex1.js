@@ -20,9 +20,31 @@ function verificacaoDeIdade() {
   console.log("Você é maior");
 }
 
-function imprimindoNumeros() {
-  for (let num = 1; num <= 10; num++) {
-    console.log(num);
+function diasDaSemana() {
+  var numero = prompt('Digite um número')
+
+  switch (numero){
+      case '1':
+          alert('segunda-feira');
+          break;
+          case '2': 
+          alert('terça-feira')
+          break;
+          case '3':
+              alert('Quarta-feira')
+              break;
+              case '4':
+                  alert('Quinta-feira')
+                  break
+              case '5':
+                  alert('Sexta-feira')
+                  break
+              case '6':
+                  alert('Sábado')
+                  break
+              case '7':
+                  alert('domingo')
+                  break
   }
 }
 
@@ -59,40 +81,44 @@ function ParesDeUmAvinte() {
 
 //menu
 
-let opcao = prompt(
-  "Escolha o exercício que você quer executar:\n1- Contagem Regressiva\n2- Exemplo Verificação de idade\n3- Imprimindo Números de 0 a 10\n4- Tabuada\n5 - Fibonacci\n6 - Pares de um a Vinte\n ou Digite 0 para sair"
-);
+let opcao;
 
-
+while(opcao != 0) {
+  opcao = parseInt(prompt(
+  "Escolha o exercício que você quer executar:\n1- Contagem Regressiva\n2- Exemplo Verificação de idade\n3- Imprimindo os dias da semana\n4- Tabuada\n5 - Fibonacci\n6 - Pares de um a Vinte\n ou Digite 0 para sair"
+));
   switch (opcao) {
-    case "0":
-        prompt('saiu');
-        break;
-    case "1":
+    case 1:
       contagemRegressiva();
       break;
 
-    case "2":
+    case 2:
       verificacaoDeIdade();
       break;
 
-    case "3":
-      imprimindoNumeros();
+    case 3:
+      diasDaSemana();
       break;
 
-    case "4":
+    case 4:
       tabuada();
       break;
-    case "5":
+    case 5:
       fibonacci();
       break;
-    case "6":
+    case 6:
       ParesDeUmAvinte();
       break;
     default:
       break;
-  }
+    
+  }  
+}
 
-  opcao = prompt(
-    "Escolha o exercício que você quer executar:\n1- Contagem Regressiva\n2- Exemplo Verificação de idade\n3- Imprimindo Números de 0 a 10\n4- Tabuada\n5 - Fibonacci\n6 - Pares de um a Vinte\n ou Digite 0 para sair"
-  );
+console.log('saiu')
+  
+  
+ 
+
+ 
+  
